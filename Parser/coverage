@@ -1,0 +1,8 @@
+mode: set
+lenrek88/main.go:5.13,7.2 1 0
+lenrek88/parser/parser.go:17.48,19.16 2 1
+lenrek88/parser/parser.go:19.16,21.3 1 0
+lenrek88/parser/parser.go:22.2,23.68 2 1
+lenrek88/parser/parser.go:23.68,31.3 2 1
+lenrek88/parser/parser.go:32.2,32.20 1 1
+lenrek88/parser/parser.go:35.40,47.2 5 1
