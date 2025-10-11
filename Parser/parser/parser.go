@@ -31,12 +31,12 @@ func ParseMovies(r io.Reader) ([]Movie, error) {
 		url, _ := card.Find("a").Attr("href")
 		movie := Movie{
 			Title:  NormalizeText(card.Find(".title").Text()),
-			Genre:  card.Find(".genre").Text(),
-			Hall:   card.Find(".labels span").Text(),
-			Time:   card.Find(".time").Text(),
-			Age:    card.Find(".age").Text(),
-			Format: card.Find(".format").Text(),
-			Price:  card.Find(".place-price .item").Text(),
+			Genre:  NormalizeText(card.Find(".genre").Text()),
+			Hall:   NormalizeText(card.Find(".labels span").Text()),
+			Time:   NormalizeText(card.Find(".time").Text()),
+			Age:    NormalizeText(card.Find(".age").Text()),
+			Format: NormalizeText(card.Find(".format").Text()),
+			Price:  NormalizeText(card.Find(".place-price .item").Text()),
 			URL:    url,
 		}
 		movies = append(movies, movie)
