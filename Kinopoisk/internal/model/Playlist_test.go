@@ -1,14 +1,13 @@
-package test
+package model
 
 import (
-	"lenrek88/internal/model"
 	"testing"
 	"time"
 )
 
 func TestPlalistValidate(t *testing.T) {
 	t.Run("Title Empty", func(t *testing.T) {
-		playlist := model.Playlist{
+		playlist := Playlist{
 			ID:        14,
 			Title:     "",
 			OwnerID:   "click click",
@@ -23,7 +22,7 @@ func TestPlalistValidate(t *testing.T) {
 	})
 
 	t.Run("Valid genre", func(t *testing.T) {
-		playlist := model.Playlist{
+		playlist := Playlist{
 			ID:        14,
 			Title:     "My Playlist",
 			OwnerID:   "click click",

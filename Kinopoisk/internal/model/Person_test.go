@@ -1,14 +1,13 @@
-package test
+package model
 
 import (
-	"lenrek88/internal/model"
 	"testing"
 	"time"
 )
 
 func TestDirectorValidate(t *testing.T) {
 	t.Run("FirstName Empty", func(t *testing.T) {
-		person := model.Person{
+		person := Person{
 			ID:        12,
 			FirstName: "",
 			LastName:  "Fader",
@@ -23,7 +22,7 @@ func TestDirectorValidate(t *testing.T) {
 	})
 
 	t.Run("LastName Empty", func(t *testing.T) {
-		person := model.Person{
+		person := Person{
 			ID:        12,
 			FirstName: "Alex",
 			LastName:  "",
@@ -38,7 +37,7 @@ func TestDirectorValidate(t *testing.T) {
 	})
 
 	t.Run("The birthday must be before the present time", func(t *testing.T) {
-		person := model.Person{
+		person := Person{
 			ID:        12,
 			FirstName: "Alex",
 			LastName:  "Fader",
@@ -53,7 +52,7 @@ func TestDirectorValidate(t *testing.T) {
 	})
 
 	t.Run("Valid person", func(t *testing.T) {
-		person := model.Person{
+		person := Person{
 			ID:        12,
 			FirstName: "Alex",
 			LastName:  "Fader",

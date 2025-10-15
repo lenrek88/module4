@@ -1,14 +1,13 @@
-package test
+package model
 
 import (
-	"lenrek88/internal/model"
 	"testing"
 	"time"
 )
 
 func TestGendreValidate(t *testing.T) {
 	t.Run("Title Empty", func(t *testing.T) {
-		genre := model.Genre{
+		genre := Genre{
 			ID:        12,
 			Title:     "",
 			CreatedAt: time.Date(2025, time.January, 20, 10, 30, 0, 0, time.UTC),
@@ -20,7 +19,7 @@ func TestGendreValidate(t *testing.T) {
 	})
 
 	t.Run("Valid genre", func(t *testing.T) {
-		genre := model.Genre{
+		genre := Genre{
 			ID:        12,
 			Title:     "Боевик",
 			CreatedAt: time.Date(2025, time.January, 20, 10, 30, 0, 0, time.UTC),
